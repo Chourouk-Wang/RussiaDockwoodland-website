@@ -1,41 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Russia Dock Woodlands</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russia Dock Woodlands</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(47,93,80,0.75), rgba(47,93,80,0.75)),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 750px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #A7C4A0;
+      color: #1f2d2a;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #2F5D50;
+    }
+
+    .intro {
+      max-width: 950px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .features {
+      text-align: center;
+      padding: 30px 20px 60px;
+    }
+
+    .goal-section {
+      background: #eaf1ec;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .goal-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .goal-section p {
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #2F5D50;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .card {
+        width: 85%;
+      }
+    }
+  </style>
+</head>
 <body>
 
-<header>
-<h1>Russia Dock Woodlands</h1>
-<p>Connecting Community, Ecology, and Governance</p>
-<nav>
-<a href="index.html">Home</a>
-<a href="involved.html">Get Involved</a>
-<a href="community.html">Community Voice</a>
-<a href="map.html">Map</a>
-<a href="ecology.html">Ecology</a>
-</nav>
-</header>
+  <header>
+    <h1>Russia Dock Woodlands</h1>
+    <p>Connecting Community, Ecology, and Governance</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="community.html">Community Voice</a>
+      <a href="map.html">Map</a>
+      <a href="ecology.html">Ecology</a>
+    </nav>
+  </header>
 
-<div class="section">
-<div class="card">
-<h3>Explore Nature</h3>
-<p>Discover biodiversity</p>
-</div>
+  <section class="hero">
+    <h1>Protecting Urban Nature Together</h1>
+    <p>
+      Russia Dock Woodlands is more than a green space. It is a shared ecological, social,
+      and community asset that supports biodiversity, wellbeing, and local participation.
+    </p>
+    <div class="hero-buttons">
+      <a href="map.html" class="btn-primary">Explore the Map</a>
+      <a href="involved.html" class="btn-secondary">Get Involved</a>
+    </div>
+  </section>
 
-<div class="card">
-<h3>Get Involved</h3>
-<a class="button" href="involved.html">Join</a>
-</div>
+  <section class="section">
+    <div class="intro">
+      <h2>About This Platform</h2>
+      <p>
+        This website prototype reimagines the Friends of Russia Dock Woodlands website
+        as a participatory platform. Rather than only sharing information, it helps connect
+        visitors, volunteers, and organisers through accessible ecological information,
+        community feedback, and opportunities for action.
+      </p>
+    </div>
+  </section>
 
-<div class="card">
-<h3>Community Voice</h3>
-<a class="button" href="community.html">Feedback</a>
-</div>
-</div>
+  <section class="features">
+    <div class="card">
+      <h3>Explore Nature</h3>
+      <p>Learn about biodiversity, habitats, and ecosystem services across the woodland.</p>
+      <br>
+      <a class="button" href="ecology.html">View Ecology</a>
+    </div>
+
+    <div class="card">
+      <h3>Get Involved</h3>
+      <p>Take part in volunteering, conservation activities, and woodland stewardship.</p>
+      <br>
+      <a class="button" href="involved.html">Join In</a>
+    </div>
+
+    <div class="card">
+      <h3>Community Voice</h3>
+      <p>Share feedback, complete surveys, and contribute ideas for the site’s future.</p>
+      <br>
+      <a class="button" href="community.html">Give Feedback</a>
+    </div>
+  </section>
+
+  <section class="goal-section">
+    <h2>Why This Matters</h2>
+    <p>
+      Urban woodlands play an important role in biodiversity protection, flood resilience,
+      environmental education, and public wellbeing. By improving digital access and
+      community participation, this platform supports a more inclusive and transparent
+      approach to environmental governance.
+    </p>
+  </section>
+
+  <footer>
+    <p>Friends of Russia Dock Woodlands | Website Prototype for Community and Ecological Engagement</p>
+  </footer>
 
 </body>
 </html>
