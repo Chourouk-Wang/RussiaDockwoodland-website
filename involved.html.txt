@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get Involved</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Get Involved</h1>
+<a href="index.html">Home</a>
+</header>
+
+<div class="section">
+<h2>Volunteer Sign-Up</h2>
+
+<input placeholder="Your Name"><br><br>
+<input placeholder="Your Email"><br><br>
+<button>Submit</button>
+
+<h2>Upcoming Activities</h2>
+<p>Tree planting day</p>
+<p>Wildlife monitoring</p>
+</div>
+
+</body>
+</html>

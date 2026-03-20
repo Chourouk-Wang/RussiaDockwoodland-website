@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Russia Dock Woodlands</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Russia Dock Woodlands</h1>
+<p>Connecting Community, Ecology, and Governance</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="involved.html">Get Involved</a>
+<a href="community.html">Community Voice</a>
+<a href="map.html">Map</a>
+<a href="ecology.html">Ecology</a>
+</nav>
+</header>
+
+<div class="section">
+<div class="card">
+<h3>Explore Nature</h3>
+<p>Discover biodiversity</p>
+</div>
+
+<div class="card">
+<h3>Get Involved</h3>
+<a class="button" href="involved.html">Join</a>
+</div>
+
+<div class="card">
+<h3>Community Voice</h3>
+<a class="button" href="community.html">Feedback</a>
+</div>
+</div>
+
+</body>
+</html>

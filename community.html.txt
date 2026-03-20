@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Community Voice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Community Voice</h1>
+<a href="index.html">Home</a>
+</header>
+
+<div class="section">
+<h2>Share Your Feedback</h2>
+
+<iframe 
+src="https://docs.google.com/forms/d/e/你的表单ID/viewform?embedded=true"
+width="80%" height="500">
+</iframe>
+
+</div>
+
+</body>
+</html>
