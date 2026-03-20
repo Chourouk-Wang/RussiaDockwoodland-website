@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Friends of Russia Dock Woodlands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Friends of Russia Dock Woodlands</h1>
+    <p>Protecting, enhancing, and promoting Russia Dock Woodlands for the enjoyment of all</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <a href="events.html">Events</a>
+      <a href="news.html">News</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="community.html">Community Voice</a>
+      <a href="map.html">Map</a>
+      <a href="ecology.html">Ecology</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>About the Friends Group</h2>
+    <p>
+      Friends of Russia Dock Woodlands is a community-led group supporting the protection,
+      enhancement, and long-term care of Russia Dock Woodlands and Stave Hill Ecological Park.
+    </p>
+  </section>
+
+  <section class="section center">
+    <h2>Who We Are</h2>
+    <p>
+      Inspired by the structure of the current Friends website, this page presents the organisation
+      as a local residents’ group working to protect the woodland, improve the site, and respond
+      to issues such as signage, maintenance, and ecological pressures. :contentReference[oaicite:1]{index=1}
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          To protect, enhance, and promote Russia Dock Woodlands for the enjoyment of all,
+          while supporting biodiversity, education, and community wellbeing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>What We Do</h3>
+        <p>
+          We help improve the woodland through community action, ecological stewardship,
+          public awareness, and dialogue with local stakeholders.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Why It Matters</h3>
+        <p>
+          The woodland is an important urban ecological asset that contributes to habitat quality,
+          recreation, climate resilience, and local identity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="highlight-inner">
+      <h2>Governance and Community Care</h2>
+      <p>
+        This upgraded website prototype expands the traditional Friends-group model by creating a
+        clearer link between community participation, ecological communication, and local governance.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>About Page | Friends of Russia Dock Woodlands</p>
+    <p class="small">Website prototype developed for community engagement and ecological stewardship.</p>
+  </footer>
+
+</body>
+</html>
