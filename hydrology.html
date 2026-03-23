@@ -208,59 +208,6 @@
       color: var(--green-dark);
     }
 
-    .button-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .button-primary,
-    .button-secondary {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-
-    .button-primary {
-      background: var(--green-light);
-      color: #1f2b21;
-    }
-
-    .button-primary:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .button-secondary {
-      border: 1px solid var(--green-mid);
-      color: var(--green-dark);
-      background: white;
-    }
-
-    .button-secondary:hover {
-      background: #f2f7f3;
-    }
-
-    .pdf-frame {
-      width: 100%;
-      height: 720px;
-      border: none;
-      border-radius: 14px;
-      margin-top: 18px;
-      box-shadow: inset 0 0 0 1px var(--border-soft);
-      background: #fff;
-    }
-
-    .mini-note {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      margin-top: 10px;
-    }
-
     footer {
       text-align: center;
       padding: 34px 20px 46px;
@@ -292,10 +239,6 @@
 
       .timeline-label {
         width: fit-content;
-      }
-
-      .pdf-frame {
-        height: 500px;
       }
     }
   </style>
@@ -482,36 +425,6 @@
           support both ecology and long-term public value.
         </p>
       </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2>Read the full report</h2>
-      </div>
-
-      <p>
-        For visitors who want more detail, the full hydrological report can be
-        accessed below.
-      </p>
-
-      <div class="button-row">
-        <a class="button-primary" href="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf" target="_blank">
-          Open PDF Report
-        </a>
-        <a class="button-secondary" href="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf" download>
-          Download PDF
-        </a>
-      </div>
-
-      <p class="mini-note">
-        The embedded version below may load more slowly on mobile devices.
-      </p>
-
-      <iframe
-        class="pdf-frame"
-        src="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf">
-      </iframe>
     </section>
 
   </main>
