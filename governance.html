@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance | Friends of Russia Dock Woodlands</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --green-dark: #2F5D50;
+      --green-mid: #5f8a77;
+      --green-light: #A7C4A0;
+      --bg-soft: #F4F7F5;
+      --bg-panel: #ffffff;
+      --text-main: #2C3E50;
+      --text-soft: #5d6d6f;
+      --border-soft: #dbe7de;
+      --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+
+    body {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .hero-governance {
+      background: linear-gradient(135deg, rgba(47,93,80,0.95), rgba(95,138,119,0.9));
+      color: white;
+      padding: 72px 20px 60px;
+      text-align: center;
+    }
+
+    .hero-governance h1 {
+      font-size: 2.4rem;
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .hero-governance p {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      opacity: 0.96;
+    }
+
+    .hero-badges {
+      margin-top: 26px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-badges span {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+
+    .page-container {
+      width: min(1120px, 90%);
+      margin: -34px auto 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-panel,
+    .section-block {
+      background: var(--bg-panel);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    .intro-panel {
+      padding: 28px 30px;
+      margin-bottom: 26px;
+    }
+
+    .intro-panel h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 1.5rem;
+    }
+
+    .intro-panel p {
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .section-block {
+      padding: 30px;
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title .bar {
+      width: 8px;
+      height: 30px;
+      border-radius: 20px;
+      background: var(--green-light);
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 1.45rem;
+    }
+
+    .section-block p {
+      line-height: 1.8;
+      color: var(--text-main);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .info-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .info-card h3 {
+      margin: 0 0 10px;
+      color: var(--green-dark);
+      font-size: 1.08rem;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 0.97rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      background: #fbfcfb;
+    }
+
+    .timeline-label {
+      background: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 1.05rem;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .house-box {
+      background: linear-gradient(135deg, #f6faf7, #ffffff);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .house-box h3 {
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    .house-box ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      line-height: 1.8;
+      color: var(--text-soft);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5ef, #f8fbf8);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--green-dark);
+    }
+
+    .mini-note {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px 46px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero-governance {
+        padding: 60px 16px 50px;
+      }
+
+      .hero-governance h1 {
+        font-size: 1.9rem;
+      }
+
+      .page-container {
+        width: 92%;
+      }
+
+      .section-block,
+      .intro-panel {
+        padding: 22px 18px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-label {
+        width: fit-content;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Friends of Russia Dock Woodlands</h1>
+    <p>Protecting, enhancing, and promoting Russia Dock Woodlands for the enjoyment of all</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <a href="events.html">Events</a>
+      <a href="news.html">News</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="community.html">Community Voice</a>
+      <a href="map.html">Map</a>
+      <a href="ecology.html">Ecology</a>
+      <a href="hydrology.html">Hydrology</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero-governance">
+    <h1>Governance and Shared Stewardship</h1>
+    <p>
+      This page explains a proposed governance model for the wider Rotherhithe ecological
+      landscape. Rather than treating each site as isolated, the proposal imagines a more
+      connected and participatory system that links ecology, community decision-making,
+      and long-term stewardship.
+    </p>
+
+    <div class="hero-badges">
+      <span>Deliberative democracy</span>
+      <span>Polycentric governance</span>
+      <span>Community co-decision</span>
+    </div>
+  </section>
+
+  <main class="page-container">
+
+    <section class="intro-panel">
+      <h2>Why governance matters here</h2>
+      <p>
+        Russia Dock Woodlands, Stave Hill, nearby green spaces, and community assets are
+        ecologically connected, but governance is often fragmented. A more unified structure
+        could help align ecological priorities, improve coordination across sites, and give
+        local communities a stronger role in decisions that affect the landscape.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>The governance idea in brief</h2>
+      </div>
+
+      <p>
+        The proposal is based on three linked ideas: nature as a shared commons, governance
+        distributed across multiple actors rather than one single authority, and stronger
+        community participation in decision-making. In the source presentation, this is framed
+        through deliberative democracy, natural capital as a commons, and polycentric governance. :contentReference[oaicite:1]{index=1}
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Natural capital as a commons</h3>
+          <p>
+            The landscape is treated as a shared ecological asset whose value is collective,
+            long-term, and not reducible to one single owner or institution.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Polycentric governance</h3>
+          <p>
+            Decision-making is spread across connected actors and scales, rather than being
+            controlled by one body alone.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Participatory governance</h3>
+          <p>
+            Local people are not only consulted, but given a more formal and meaningful role
+            in shaping outcomes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Current governance challenges</h2>
+      </div>
+
+      <p>
+        The presentation identifies a series of interconnected weaknesses in the existing
+        model, including fragmented authority, defensive conservation, artificial hydrology,
+        and weak financial and ecological autonomy under strong development pressure. :contentReference[oaicite:2]{index=2}
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Fragmented authority</h3>
+          <p>
+            Different sites and actors operate separately, which makes joined-up ecological
+            management harder.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Cross-site problems</h3>
+          <p>
+            Water, species, access, and visitor behaviour move across boundaries, but decisions
+            often do not.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Development pressure</h3>
+          <p>
+            Rapid change in the surrounding area creates pressure without a matching long-term
+            governance structure for the ecological landscape.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>The proposed two-house model</h2>
+      </div>
+
+      <p>
+        A central feature of the proposal is a twin-house structure. One side focuses on
+        ecological and technical stewardship, while the other focuses on community priorities,
+        participation, and co-decision. The original deck refers to these as the Ecology House
+        and the Community House. :contentReference[oaicite:3]{index=3}
+      </p>
+
+      <div class="two-column">
+        <div class="house-box">
+          <h3>Ecology House</h3>
+          <ul>
+            <li>Coordinates ecological priorities across sites</li>
+            <li>Supports habitat strategy, monitoring, and technical standards</li>
+            <li>Links site-level action to borough and metropolitan agendas</li>
+            <li>Provides a unified ecological voice in negotiations</li>
+          </ul>
+        </div>
+
+        <div class="house-box">
+          <h3>Community House</h3>
+          <ul>
+            <li>Brings together residents, Friends groups, and community organisations</li>
+            <li>Moves beyond consultation toward co-decision</li>
+            <li>Supports participation in social programmes, events, and local priorities</li>
+            <li>Creates a formal route for community influence over change</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>How the structure works</h2>
+      </div>
+
+      <p>
+        In the proposal, the two houses sit within a wider landscape partnership. Site-level
+        management continues, but a landscape-scale layer is added above it to coordinate
+        strategy, funding priorities, and larger cross-site decisions. The uploaded slides show
+        this as an overarching Rotherhithe eco-landscape partnership structure. :contentReference[oaicite:4]{index=4}
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          <strong>In practice, this means:</strong> day-to-day management stays local, but
+          bigger questions — such as land use, funding bids, ecological connectivity, and
+          shared priorities — are handled through a more joined-up system with both ecological
+          and community representation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Implementation pathway</h2>
+      </div>
+
+      <p>
+        The source presentation proposes a 12–18 month pilot rather than an immediate permanent
+        restructuring. The aim is to test coordination, define shared priorities, deliver a small
+        number of visible projects, and then review what works. :contentReference[oaicite:5]{index=5}
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-label">Months 1–2</div>
+          <div class="timeline-content">
+            <h3>Set up the pilot partnership</h3>
+            <p>
+              Bring together key stakeholders and establish a clearer landscape-level coordination structure.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Months 2–4</div>
+          <div class="timeline-content">
+            <h3>Agree priorities and funding routes</h3>
+            <p>
+              Identify a shortlist of joint priorities and align them with funding opportunities and wider development contributions.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Months 4–12</div>
+          <div class="timeline-content">
+            <h3>Deliver visible “seed” projects</h3>
+            <p>
+              Test small but visible cross-site actions that demonstrate the value of coordinated ecological and community governance.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Months 12–18</div>
+          <div class="timeline-content">
+            <h3>Review and adapt</h3>
+            <p>
+              Assess what changed, what worked well, and what should be improved in the next cycle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Why this matters for residents</h2>
+      </div>
+
+      <p>
+        The proposal is framed not as abstract institutional design, but as a way to protect and
+        improve the woods, ponds, gardens, and community spaces that people already value. It also
+        seeks to ensure that change linked to Canada Water and surrounding development is matched by
+        stronger ecological stewardship and fairer community influence. :contentReference[oaicite:6]{index=6}
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          <strong>Key takeaway:</strong> this model is about moving from fragmented management and
+          consultation-based participation towards a more coordinated, landscape-scale, and genuinely
+          participatory form of environmental governance.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Friends of Russia Dock Woodlands</p>
+    <p>Governance content adapted for public communication from the project governance presentation.</p>
+  </footer>
+
+</body>
+</html>
