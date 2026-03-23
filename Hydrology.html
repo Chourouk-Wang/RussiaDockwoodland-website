@@ -1,1 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrology | Russia Dock Woodlands</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --green-dark: #2F5D50;
+      --green-mid: #5f8a77;
+      --green-light: #A7C4A0;
+      --bg-soft: #F4F7F5;
+      --bg-panel: #ffffff;
+      --text-main: #2C3E50;
+      --text-soft: #5d6d6f;
+      --border-soft: #dbe7de;
+      --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
 
+    body {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .hero-hydro {
+      background: linear-gradient(135deg, rgba(47,93,80,0.95), rgba(95,138,119,0.9));
+      color: white;
+      padding: 72px 20px 60px;
+      text-align: center;
+    }
+
+    .hero-hydro h1 {
+      font-size: 2.4rem;
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .hero-hydro p {
+      max-width: 820px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      opacity: 0.96;
+    }
+
+    .hero-badges {
+      margin-top: 26px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-badges span {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+
+    .page-container {
+      width: min(1120px, 90%);
+      margin: -34px auto 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-panel {
+      background: var(--bg-panel);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 28px 30px;
+      margin-bottom: 26px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .intro-panel h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 1.5rem;
+    }
+
+    .intro-panel p {
+      line-height: 1.8;
+      margin-bottom: 0;
+      color: var(--text-main);
+    }
+
+    .section-block {
+      background: var(--bg-panel);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 30px;
+      margin-bottom: 26px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title .bar {
+      width: 8px;
+      height: 30px;
+      border-radius: 20px;
+      background: var(--green-light);
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 1.45rem;
+    }
+
+    .section-block p {
+      line-height: 1.8;
+      color: var(--text-main);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .info-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .info-card h3 {
+      margin: 0 0 10px;
+      color: var(--green-dark);
+      font-size: 1.08rem;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 0.97rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      background: #fbfcfb;
+    }
+
+    .timeline-label {
+      background: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 1.05rem;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5ef, #f8fbf8);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--green-dark);
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--green-light);
+      color: #1f2b21;
+    }
+
+    .button-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--green-mid);
+      color: var(--green-dark);
+      background: white;
+    }
+
+    .button-secondary:hover {
+      background: #f2f7f3;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 720px;
+      border: none;
+      border-radius: 14px;
+      margin-top: 18px;
+      box-shadow: inset 0 0 0 1px var(--border-soft);
+      background: #fff;
+    }
+
+    .mini-note {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px 46px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero-hydro {
+        padding: 60px 16px 50px;
+      }
+
+      .hero-hydro h1 {
+        font-size: 1.9rem;
+      }
+
+      .page-container {
+        width: 92%;
+      }
+
+      .section-block,
+      .intro-panel {
+        padding: 22px 18px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-label {
+        width: fit-content;
+      }
+
+      .pdf-frame {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Russia Dock Woodlands</h1>
+    <p>Connecting Community, Ecology, and Governance</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="community.html">Community Voice</a>
+      <a href="map.html">Map</a>
+      <a href="ecology.html">Ecology</a>
+      <a href="hydrology.html">Hydrology</a>
+    </nav>
+  </header>
+
+  <section class="hero-hydro">
+    <h1>Hydrology and Water Resilience</h1>
+    <p>
+      This page explains the water challenges affecting Russia Dock Woodlands
+      and outlines strategies for improving circulation, retention, and long-term
+      ecological resilience across the site.
+    </p>
+
+    <div class="hero-badges">
+      <span>Water management</span>
+      <span>Ecological resilience</span>
+      <span>Long-term sustainability</span>
+    </div>
+  </section>
+
+  <main class="page-container">
+
+    <section class="intro-panel">
+      <h2>Why hydrology matters here</h2>
+      <p>
+        Healthy woodlands depend not only on biodiversity, but also on how water
+        moves through the landscape. At Russia Dock Woodlands, the key issue is
+        not simply a shortage of water. It is the wider challenge of how water is
+        captured, circulated, retained, and reused across the system.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Current challenges</h2>
+      </div>
+
+      <p>
+        The site faces a number of linked hydrological pressures. These include
+        sediment build-up, reduced pond quality, weak downstream circulation,
+        and seasonal drying. Together, these problems affect ecological quality,
+        maintenance demands, and the long-term resilience of the landscape.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Upstream pressures</h3>
+          <p>
+            Sediment accumulation and degraded pond conditions reduce habitat quality
+            and weaken ecological performance.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Downstream disruption</h3>
+          <p>
+            Blocked channels, leakage, and interrupted circulation make it harder
+            for water to move efficiently through the site.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>System-level issue</h3>
+          <p>
+            The challenge is not only water quantity, but the organisation and
+            effectiveness of the whole water system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Proposed strategies</h2>
+      </div>
+
+      <p>
+        A more resilient hydrological system would combine ecological restoration,
+        improved circulation, and better water input. Rather than relying on a
+        single intervention, the approach works across the whole landscape.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Reactivating pond ecology</h3>
+          <p>
+            Improve water quality through better circulation, sediment control,
+            and habitat-sensitive management.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Strengthening downstream flow</h3>
+          <p>
+            Re-profile channels, reduce blockages, and support more reliable
+            circulation during drier periods.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Capturing local rainwater</h3>
+          <p>
+            Use rain gardens, swales, and distributed drainage features to improve
+            inflow and retention across the site.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>A phased vision</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-label">Short term</div>
+          <div class="timeline-content">
+            <h3>Improve efficiency of the existing system</h3>
+            <p>
+              Focus on making current inflows and circulation work more effectively
+              through small-scale repair and optimisation.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Medium term</div>
+          <div class="timeline-content">
+            <h3>Introduce distributed rainwater systems</h3>
+            <p>
+              Add localised interventions such as rain gardens, swales, and other
+              sustainable drainage features to strengthen water input.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Long term</div>
+          <div class="timeline-content">
+            <h3>Build an integrated resilient water infrastructure</h3>
+            <p>
+              Connect site-level hydrology with wider urban development and future
+              environmental planning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Key takeaway</h2>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>The central message is simple:</strong> this landscape does not
+          just need more water. It needs a better organised water system — one
+          that improves capture, circulation, retention, and reuse in ways that
+          support both ecology and long-term public value.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Read the full report</h2>
+      </div>
+
+      <p>
+        For visitors who want more detail, the full hydrological report can be
+        accessed below.
+      </p>
+
+      <div class="button-row">
+        <a class="button-primary" href="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf" target="_blank">
+          Open PDF Report
+        </a>
+        <a class="button-secondary" href="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf" download>
+          Download PDF
+        </a>
+      </div>
+
+      <p class="mini-note">
+        The embedded version below may load more slowly on mobile devices.
+      </p>
+
+      <iframe
+        class="pdf-frame"
+        src="docs/BGLP0017_Atelier_Prototyping_Natural_Prosperity.pdf">
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    Hydrology content adapted for public communication as part of the Russia Dock Woodlands website prototype.
+  </footer>
+
+</body>
+</html>
