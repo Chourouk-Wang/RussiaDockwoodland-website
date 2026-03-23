@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecosystem Value | Friends of Russia Dock Woodlands</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --green-dark: #2F5D50;
+      --green-mid: #5f8a77;
+      --green-light: #A7C4A0;
+      --bg-soft: #F4F7F5;
+      --bg-panel: #ffffff;
+      --text-main: #2C3E50;
+      --text-soft: #5d6d6f;
+      --border-soft: #dbe7de;
+      --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+
+    body {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .hero-ecosystem {
+      background: linear-gradient(135deg, rgba(47,93,80,0.95), rgba(95,138,119,0.9));
+      color: white;
+      padding: 72px 20px 60px;
+      text-align: center;
+    }
+
+    .hero-ecosystem h1 {
+      font-size: 2.4rem;
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .hero-ecosystem p {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      opacity: 0.96;
+    }
+
+    .hero-badges {
+      margin-top: 26px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-badges span {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+
+    .page-container {
+      width: min(1120px, 90%);
+      margin: -34px auto 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-panel,
+    .section-block {
+      background: var(--bg-panel);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    .intro-panel {
+      padding: 28px 30px;
+      margin-bottom: 26px;
+    }
+
+    .intro-panel h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 1.5rem;
+    }
+
+    .intro-panel p {
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .section-block {
+      padding: 30px;
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title .bar {
+      width: 8px;
+      height: 30px;
+      border-radius: 20px;
+      background: var(--green-light);
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 1.45rem;
+    }
+
+    .section-block p {
+      line-height: 1.8;
+      color: var(--text-main);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .info-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .info-card h3 {
+      margin: 0 0 10px;
+      color: var(--green-dark);
+      font-size: 1.08rem;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 0.97rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .house-box {
+      background: linear-gradient(135deg, #f6faf7, #ffffff);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .house-box h3 {
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    .house-box ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      line-height: 1.8;
+      color: var(--text-soft);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5ef, #f8fbf8);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--green-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px 46px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero-ecosystem {
+        padding: 60px 16px 50px;
+      }
+
+      .hero-ecosystem h1 {
+        font-size: 1.9rem;
+      }
+
+      .page-container {
+        width: 92%;
+      }
+
+      .section-block,
+      .intro-panel {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Friends of Russia Dock Woodlands</h1>
+    <p>Protecting, enhancing, and promoting Russia Dock Woodlands for the enjoyment of all</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <a href="events.html">Events</a>
+      <a href="news.html">News</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="community.html">Community Voice</a>
+      <a href="map.html">Map</a>
+      <a href="ecology.html">Ecology</a>
+      <a href="ecosystem.html">Ecosystem Value</a>
+      <a href="hydrology.html">Hydrology</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero-ecosystem">
+    <h1>Ecosystem Value and Public Benefit</h1>
+    <p>
+      This page explains why urban woodlands generate important benefits for people,
+      neighbourhoods, and the wider environment. It focuses on the idea that many of
+      these benefits are real and valuable, even when they are not clearly priced in markets.
+    </p>
+
+    <div class="hero-badges">
+      <span>Public goods</span>
+      <span>Urban nature</span>
+      <span>Decision-ready value</span>
+    </div>
+  </section>
+
+  <main class="page-container">
+
+    <section class="intro-panel">
+      <h2>Why this matters</h2>
+      <p>
+        Russia Dock Woodlands and Stave Hill Ecological Park are more than pleasant green
+        spaces. They support biodiversity, learning, recreation, mental wellbeing, and wider
+        environmental resilience. Yet many of these benefits remain invisible in budgets,
+        planning decisions, and everyday management debates.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>What are ecosystem services?</h2>
+      </div>
+
+      <p>
+        Ecosystem services are the benefits that people receive from nature. In an urban
+        woodland, these benefits are not only ecological. They also include social,
+        educational, and everyday quality-of-life benefits.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Provisioning</h3>
+          <p>
+            Natural systems can provide material resources such as water, biomass, and
+            other ecological outputs.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Regulating</h3>
+          <p>
+            Woodlands and parks help regulate temperature, water, habitat quality, and
+            other environmental processes.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Cultural</h3>
+          <p>
+            Urban nature supports recreation, identity, learning, community life, and
+            mental wellbeing.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Supporting</h3>
+          <p>
+            Soils, habitats, species interactions, and nutrient cycles underpin the wider
+            health of the ecosystem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Why urban nature is often undervalued</h2>
+      </div>
+
+      <p>
+        Many ecosystem services function as public goods. People benefit from them collectively,
+        but they are often under-recognised because they are not directly bought and sold.
+        Some benefits, such as recreation, are visible and immediate. Others, such as climate
+        regulation or ecological resilience, are less obvious and more easily ignored.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          <strong>The key issue is visibility.</strong> Valuation does not create value from
+          nowhere. It helps make already-existing ecological and social benefits more visible
+          to planning, funding, and governance processes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>How people think about ecosystem value</h2>
+      </div>
+
+      <p>
+        The presentation outlined several different approaches to ecosystem service valuation.
+        Rather than focusing on numerical estimates, this page highlights what each method
+        helps us understand.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Hedonic pricing</h3>
+          <p>
+            Looks at how environmental quality may shape nearby property values, showing
+            that access to green space can influence how places are valued.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Holistic valuation</h3>
+          <p>
+            Treats the park as natural capital and asks how ecological systems contribute
+            to wider neighbourhood attractiveness, health, and livability.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Benefit transfer</h3>
+          <p>
+            Uses evidence from previous ecosystem studies to estimate likely value patterns
+            for similar habitats and services.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Willingness to pay</h3>
+          <p>
+            Explores how strongly local people support the site and what kinds of practical
+            improvements they care about most.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>What this means in practice</h2>
+      </div>
+
+      <div class="two-column">
+        <div class="house-box">
+          <h3>For planning and policy</h3>
+          <ul>
+            <li>Makes hidden trade-offs easier to see</li>
+            <li>Strengthens arguments for conservation and long-term maintenance</li>
+            <li>Supports funding decisions beyond short-term visible fixes</li>
+            <li>Shows that nature should be treated as core infrastructure, not leftover land</li>
+          </ul>
+        </div>
+
+        <div class="house-box">
+          <h3>For community wellbeing</h3>
+          <ul>
+            <li>Highlights the social value of everyday access to nature</li>
+            <li>Supports healthier, safer, and more attractive neighbourhoods</li>
+            <li>Strengthens community claims to protect shared green spaces</li>
+            <li>Links environmental quality with public wellbeing and inclusion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Key takeaway</h2>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>The main message is simple:</strong> woodlands and ecological parks create
+          value that is ecological, social, and civic at the same time. Ecosystem valuation
+          helps translate that wider value into a language that can support better decisions,
+          fairer funding, and stronger public stewardship.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Friends of Russia Dock Woodlands</p>
+    <p>Ecosystem value content adapted for public communication as part of the website prototype.</p>
+  </footer>
+
+</body>
+</html>
