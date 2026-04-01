@@ -27,9 +27,11 @@
     }
 
     .hero-governance {
-      background: linear-gradient(135deg, rgba(47,93,80,0.95), rgba(95,138,119,0.9));
+      background:
+        linear-gradient(135deg, rgba(47,93,80,0.94), rgba(95,138,119,0.88)),
+        url("images/governance/landscape-map.jpg") center/cover no-repeat;
       color: white;
-      padding: 72px 20px 60px;
+      padding: 78px 20px 64px;
       text-align: center;
     }
 
@@ -43,8 +45,8 @@
       max-width: 860px;
       margin: 0 auto;
       font-size: 1.08rem;
-      line-height: 1.7;
-      opacity: 0.96;
+      line-height: 1.75;
+      opacity: 0.97;
     }
 
     .hero-badges {
@@ -91,6 +93,11 @@
 
     .intro-panel p {
       line-height: 1.8;
+      margin: 0 0 14px;
+      color: var(--text-main);
+    }
+
+    .intro-panel p:last-child {
       margin-bottom: 0;
     }
 
@@ -122,6 +129,7 @@
     .section-block p {
       line-height: 1.8;
       color: var(--text-main);
+      margin-top: 0;
     }
 
     .card-grid {
@@ -155,6 +163,32 @@
       color: var(--text-soft);
       line-height: 1.7;
       font-size: 0.97rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .house-box {
+      background: linear-gradient(135deg, #f6faf7, #ffffff);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .house-box h3 {
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    .house-box ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      line-height: 1.8;
+      color: var(--text-soft);
     }
 
     .timeline {
@@ -195,32 +229,6 @@
       color: var(--text-soft);
     }
 
-    .two-column {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .house-box {
-      background: linear-gradient(135deg, #f6faf7, #ffffff);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-md);
-      padding: 22px;
-    }
-
-    .house-box h3 {
-      margin-top: 0;
-      color: var(--green-dark);
-    }
-
-    .house-box ul {
-      margin: 12px 0 0 18px;
-      padding: 0;
-      line-height: 1.8;
-      color: var(--text-soft);
-    }
-
     .highlight-box {
       background: linear-gradient(135deg, #edf5ef, #f8fbf8);
       border: 1px solid var(--border-soft);
@@ -233,10 +241,72 @@
       color: var(--green-dark);
     }
 
-    .mini-note {
-      font-size: 0.95rem;
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .image-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #e9f1eb;
+    }
+
+    .image-card .caption {
+      padding: 16px 18px;
+    }
+
+    .image-card h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 1.02rem;
+    }
+
+    .image-card p {
+      margin: 0;
       color: var(--text-soft);
-      margin-top: 10px;
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    .diagram-panel {
+      margin-top: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #f8fbf8;
+    }
+
+    .diagram-panel img {
+      width: 100%;
+      display: block;
+      background: #edf5ef;
+    }
+
+    .diagram-panel .caption {
+      padding: 18px 20px;
+    }
+
+    .diagram-panel .caption h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+    }
+
+    .diagram-panel .caption p {
+      margin: 0;
+      color: var(--text-soft);
     }
 
     footer {
@@ -271,6 +341,10 @@
       .timeline-label {
         width: fit-content;
       }
+
+      .image-card img {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -298,16 +372,16 @@
   <section class="hero-governance">
     <h1>Governance and Shared Stewardship</h1>
     <p>
-      This page explains a proposed governance model for the wider Rotherhithe ecological
-      landscape. Rather than treating each site as isolated, the proposal imagines a more
-      connected and participatory system that links ecology, community decision-making,
-      and long-term stewardship.
+      The wider Rotherhithe ecological landscape is made up of several connected sites, including
+      Stave Hill Ecological Park, Russia Dock Woodland, Lavender Pond Nature Park, and Surrey Docks Farm.
+      The project argues that these places already function as a linked ecological and civic landscape,
+      but their governance remains fragmented.
     </p>
 
     <div class="hero-badges">
-      <span>Deliberative democracy</span>
-      <span>Polycentric governance</span>
+      <span>Landscape-scale coordination</span>
       <span>Community co-decision</span>
+      <span>Twin-House model</span>
     </div>
   </section>
 
@@ -316,147 +390,59 @@
     <section class="intro-panel">
       <h2>Why governance matters here</h2>
       <p>
-        Russia Dock Woodlands, Stave Hill, nearby green spaces, and community assets are
-        ecologically connected, but governance is often fragmented. A more unified structure
-        could help align ecological priorities, improve coordination across sites, and give
-        local communities a stronger role in decisions that affect the landscape.
+        These sites are connected by ecology, hydrology, pedestrian continuity, and overlapping forms of
+        civic stewardship. Yet they are still often managed as separate places. The governance project asks
+        how to preserve existing stewardship while creating a more formal landscape-scale system for
+        coordination, funding, and democratic participation.
+      </p>
+      <p>
+        The key challenge is not how to replace current stewards, but how to connect them more effectively
+        while giving community actors a real role in shaping shared priorities across the whole landscape.
       </p>
     </section>
 
     <section class="section-block">
       <div class="section-title">
         <div class="bar"></div>
-        <h2>The governance idea in brief</h2>
+        <h2>The current governance problem</h2>
       </div>
 
       <p>
-        The proposal is based on three linked ideas: nature as a shared commons, governance
-        distributed across multiple actors rather than one single authority, and stronger
-        community participation in decision-making. In the source presentation, this is framed
-        through deliberative democracy, natural capital as a commons, and polycentric governance. :contentReference[oaicite:1]{index=1}
+        The presentation identifies three critical governance deficits across the Rotherhithe eco-landscape.
+        These are not simply technical problems. They are institutional problems linked to fragmented decision-making,
+        weak community power, and the absence of a formal body operating at landscape scale.
       </p>
 
       <div class="card-grid">
         <div class="info-card">
-          <h3>Natural capital as a commons</h3>
+          <h3>Fragmented decision-making</h3>
           <p>
-            The landscape is treated as a shared ecological asset whose value is collective,
-            long-term, and not reducible to one single owner or institution.
+            Multiple contacts and informal coordination routes exist, but there is no shared forum that aligns
+            funding, priorities, and timing across the whole landscape.
           </p>
         </div>
 
         <div class="info-card">
-          <h3>Polycentric governance</h3>
+          <h3>Consultation without power</h3>
           <p>
-            Decision-making is spread across connected actors and scales, rather than being
-            controlled by one body alone.
+            Friends groups and local actors can express concerns and debate priorities, but budgets, design
+            choices, and delivery timelines often remain elsewhere.
           </p>
         </div>
 
         <div class="info-card">
-          <h3>Participatory governance</h3>
+          <h3>No landscape-scale planning body</h3>
           <p>
-            Local people are not only consulted, but given a more formal and meaningful role
-            in shaping outcomes.
+            There is no formal mechanism to allocate cross-site funding, coordinate developer negotiations,
+            or respond collectively to climate and growth pressures.
           </p>
         </div>
       </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2>Current governance challenges</h2>
-      </div>
-
-      <p>
-        The presentation identifies a series of interconnected weaknesses in the existing
-        model, including fragmented authority, defensive conservation, artificial hydrology,
-        and weak financial and ecological autonomy under strong development pressure. :contentReference[oaicite:2]{index=2}
-      </p>
-
-      <div class="card-grid">
-        <div class="info-card">
-          <h3>Fragmented authority</h3>
-          <p>
-            Different sites and actors operate separately, which makes joined-up ecological
-            management harder.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <h3>Cross-site problems</h3>
-          <p>
-            Water, species, access, and visitor behaviour move across boundaries, but decisions
-            often do not.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <h3>Development pressure</h3>
-          <p>
-            Rapid change in the surrounding area creates pressure without a matching long-term
-            governance structure for the ecological landscape.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2>The proposed two-house model</h2>
-      </div>
-
-      <p>
-        A central feature of the proposal is a twin-house structure. One side focuses on
-        ecological and technical stewardship, while the other focuses on community priorities,
-        participation, and co-decision. The original deck refers to these as the Ecology House
-        and the Community House. :contentReference[oaicite:3]{index=3}
-      </p>
-
-      <div class="two-column">
-        <div class="house-box">
-          <h3>Ecology House</h3>
-          <ul>
-            <li>Coordinates ecological priorities across sites</li>
-            <li>Supports habitat strategy, monitoring, and technical standards</li>
-            <li>Links site-level action to borough and metropolitan agendas</li>
-            <li>Provides a unified ecological voice in negotiations</li>
-          </ul>
-        </div>
-
-        <div class="house-box">
-          <h3>Community House</h3>
-          <ul>
-            <li>Brings together residents, Friends groups, and community organisations</li>
-            <li>Moves beyond consultation toward co-decision</li>
-            <li>Supports participation in social programmes, events, and local priorities</li>
-            <li>Creates a formal route for community influence over change</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2>How the structure works</h2>
-      </div>
-
-      <p>
-        In the proposal, the two houses sit within a wider landscape partnership. Site-level
-        management continues, but a landscape-scale layer is added above it to coordinate
-        strategy, funding priorities, and larger cross-site decisions. The uploaded slides show
-        this as an overarching Rotherhithe eco-landscape partnership structure. :contentReference[oaicite:4]{index=4}
-      </p>
 
       <div class="highlight-box">
         <p>
-          <strong>In practice, this means:</strong> day-to-day management stays local, but
-          bigger questions — such as land use, funding bids, ecological connectivity, and
-          shared priorities — are handled through a more joined-up system with both ecological
-          and community representation.
+          <strong>In short:</strong> participation is often heard, but not binding. Existing stewards remain active,
+          but too often in institutional isolation.
         </p>
       </div>
     </section>
@@ -464,54 +450,91 @@
     <section class="section-block">
       <div class="section-title">
         <div class="bar"></div>
-        <h2>Implementation pathway</h2>
+        <h2>Theoretical framework</h2>
       </div>
 
       <p>
-        The source presentation proposes a 12–18 month pilot rather than an immediate permanent
-        restructuring. The aim is to test coordination, define shared priorities, deliver a small
-        number of visible projects, and then review what works. :contentReference[oaicite:5]{index=5}
+        The governance model is built on three linked ideas. Commons governance provides an institutional structure,
+        deliberative democracy gives the community real voice, and the “Seeds of Good Anthropocene” perspective
+        frames local initiatives as experiments that can be protected, connected, and scaled.
       </p>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-label">Months 1–2</div>
-          <div class="timeline-content">
-            <h3>Set up the pilot partnership</h3>
-            <p>
-              Bring together key stakeholders and establish a clearer landscape-level coordination structure.
-            </p>
-          </div>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Commons governance</h3>
+          <p>
+            Treats the ecological landscape as a shared resource requiring collective rules, stewardship,
+            and long-term care rather than fragmented control.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-label">Months 2–4</div>
-          <div class="timeline-content">
-            <h3>Agree priorities and funding routes</h3>
-            <p>
-              Identify a shortlist of joint priorities and align them with funding opportunities and wider development contributions.
-            </p>
-          </div>
+        <div class="info-card">
+          <h3>Deliberative democracy</h3>
+          <p>
+            Moves beyond consultation by creating formal spaces in which community actors can influence,
+            debate, and shape collective decisions.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-label">Months 4–12</div>
-          <div class="timeline-content">
-            <h3>Deliver visible “seed” projects</h3>
-            <p>
-              Test small but visible cross-site actions that demonstrate the value of coordinated ecological and community governance.
-            </p>
-          </div>
+        <div class="info-card">
+          <h3>Seeds of Good Anthropocene</h3>
+          <p>
+            Recognises local projects and stewardship practices as small but important “seeds” that can support
+            wider transformation when they are connected, protected, and institutionalised.
+          </p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>Why this matters at Rotherhithe:</strong> existing site management can stay in place, but the landscape tier
+          becomes formal, community voice becomes more binding, and local ecological and social experiments become easier to scale.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>The proposed Twin-House governance model</h2>
+      </div>
+
+      <p>
+        The core proposal is the creation of a Rotherhithe Eco-Landscape Partnership built around a Twin-House governance
+        architecture. The model is designed to keep local management in place while adding a landscape-scale structure that
+        combines ecological coordination with community power.
+      </p>
+
+      <div class="two-column">
+        <div class="house-box">
+          <h3>Ecology House</h3>
+          <ul>
+            <li>Coordinates landscape-scale ecological priorities.</li>
+            <li>Supports habitat management, monitoring, and technical planning across sites.</li>
+            <li>Provides a shared ecological voice in negotiations, funding, and adaptation strategy.</li>
+            <li>Helps link separate sites into one coherent ecological landscape.</li>
+          </ul>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-label">Months 12–18</div>
-          <div class="timeline-content">
-            <h3>Review and adapt</h3>
-            <p>
-              Assess what changed, what worked well, and what should be improved in the next cycle.
-            </p>
-          </div>
+        <div class="house-box">
+          <h3>Community House</h3>
+          <ul>
+            <li>Brings together Friends groups, residents, volunteers, and community organisations.</li>
+            <li>Creates a more formal route for community participation and co-decision.</li>
+            <li>Ensures local priorities are not merely advisory but institutionally recognised.</li>
+            <li>Strengthens civic stewardship and democratic legitimacy across the landscape.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="diagram-panel">
+        <img src="images/governance/twin-house-diagram.jpg" alt="Twin-House governance architecture diagram">
+        <div class="caption">
+          <h3>Twin-House governance architecture</h3>
+          <p>
+            The partnership model keeps existing stewards in place, but adds a formal landscape-scale layer that connects
+            technical ecology and community governance instead of leaving them institutionally separate.
+          </p>
         </div>
       </div>
     </section>
@@ -519,21 +542,164 @@
     <section class="section-block">
       <div class="section-title">
         <div class="bar"></div>
-        <h2>Why this matters for residents</h2>
+        <h2>How the framework operates</h2>
       </div>
 
       <p>
-        The proposal is framed not as abstract institutional design, but as a way to protect and
-        improve the woods, ponds, gardens, and community spaces that people already value. It also
-        seeks to ensure that change linked to Canada Water and surrounding development is matched by
-        stronger ecological stewardship and fairer community influence. :contentReference[oaicite:6]{index=6}
+        The PPT proposes a practical operating cycle: <strong>Monitor – Deliberate – Act – Learn</strong>.
+        This means governance is not treated as a fixed one-off plan, but as a repeated process of evidence,
+        discussion, action, and adaptation.
       </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Monitor</h3>
+          <p>
+            Build a shared evidence base across sites, including ecological change, public use, and landscape pressures.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Deliberate</h3>
+          <p>
+            Use formal discussion spaces to compare priorities, resolve tensions, and make decisions with both ecological
+            and community input.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Act</h3>
+          <p>
+            Deliver coordinated projects, funding decisions, or management responses at landscape scale rather than site by site.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Learn</h3>
+          <p>
+            Review outcomes, learn across sites, and adapt the framework over time instead of freezing it in one institutional form.
+          </p>
+        </div>
+      </div>
+
+      <div class="diagram-panel">
+        <img src="images/governance/operations-cycle.jpg" alt="Monitor deliberate act learn operations cycle">
+        <div class="caption">
+          <h3>Monitor – Deliberate – Act – Learn</h3>
+          <p>
+            The proposed governance framework is intentionally adaptive. It treats coordination as an ongoing cycle rather than a single administrative fix.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Implementation strategy</h2>
+      </div>
+
+      <p>
+        The presentation proposes a phased implementation pathway with built-in adaptation. This reflects the idea that governance
+        reform should not be imposed all at once, but introduced gradually, tested, and refined through practice.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-label">Phase 1</div>
+          <div class="timeline-content">
+            <h3>Build the partnership structure</h3>
+            <p>
+              Establish the shared landscape platform and define how the ecology and community houses relate to existing stewards and institutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Phase 2</div>
+          <div class="timeline-content">
+            <h3>Test coordination in practice</h3>
+            <p>
+              Begin using the framework to align priorities, coordinate responses across sites, and improve communication around funding and delivery.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-label">Phase 3</div>
+          <div class="timeline-content">
+            <h3>Adapt and institutionalise</h3>
+            <p>
+              Review what works, strengthen useful mechanisms, and gradually translate successful coordination into more stable long-term practice.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="diagram-panel">
+        <img src="images/governance/implementation-strategy.jpg" alt="Phased governance implementation strategy diagram">
+        <div class="caption">
+          <h3>Phased implementation with adaptation</h3>
+          <p>
+            The framework is designed to evolve. Its purpose is to move from informal fragmentation towards practical and empowered landscape governance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>What the framework could improve</h2>
+      </div>
+
+      <p>
+        The conclusion of the PPT sets out a series of ecological, governance, social, and strategic benefits that could follow from the framework.
+        The goal is not centralisation for its own sake, but a more coherent, democratic, and resilient form of stewardship.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Ecological benefits</h3>
+          <p>
+            Better habitat coordination, stronger monitoring, improved climate adaptation, and new opportunities for biodiversity-related funding.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Governance benefits</h3>
+          <p>
+            A clearer ecological interlocutor, more transparent funding choices, stronger conflict-resolution routes, and greater negotiating capacity.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Social benefits</h3>
+          <p>
+            Better volunteer coordination, more equitable representation, stronger wellbeing and food-growing links, and a more accessible public landscape.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Strategic benefits</h3>
+          <p>
+            A practical way to connect local seeds, learn across sites, and translate broad policy commitments into workable institutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Key takeaway</h2>
+      </div>
 
       <div class="highlight-box">
         <p>
-          <strong>Key takeaway:</strong> this model is about moving from fragmented management and
-          consultation-based participation towards a more coordinated, landscape-scale, and genuinely
-          participatory form of environmental governance.
+          <strong>The central message is simple:</strong> Rotherhithe’s commons should be governed with communities, not merely for communities.
+          Existing stewards should continue managing their sites, but no longer in isolation. A landscape-scale partnership can make ecological
+          coordination more coherent while giving community actors more meaningful power over shared priorities.
         </p>
       </div>
     </section>
@@ -542,7 +708,7 @@
 
   <footer>
     <p>Friends of Russia Dock Woodlands</p>
-    <p>Governance content adapted for public communication from the project governance presentation.</p>
+    <p>Governance content adapted from the group governance analysis presentation for public communication.</p>
   </footer>
 
 </body>
