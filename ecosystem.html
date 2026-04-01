@@ -27,9 +27,11 @@
     }
 
     .hero-ecosystem {
-      background: linear-gradient(135deg, rgba(47,93,80,0.95), rgba(95,138,119,0.9));
+      background:
+        linear-gradient(135deg, rgba(47,93,80,0.94), rgba(95,138,119,0.88)),
+        url("images/ecosystem/hero-forest.jpg") center/cover no-repeat;
       color: white;
-      padding: 72px 20px 60px;
+      padding: 78px 20px 64px;
       text-align: center;
     }
 
@@ -43,8 +45,8 @@
       max-width: 860px;
       margin: 0 auto;
       font-size: 1.08rem;
-      line-height: 1.7;
-      opacity: 0.96;
+      line-height: 1.75;
+      opacity: 0.97;
     }
 
     .hero-badges {
@@ -91,6 +93,11 @@
 
     .intro-panel p {
       line-height: 1.8;
+      margin: 0 0 14px;
+      color: var(--text-main);
+    }
+
+    .intro-panel p:last-child {
       margin-bottom: 0;
     }
 
@@ -122,6 +129,7 @@
     .section-block p {
       line-height: 1.8;
       color: var(--text-main);
+      margin-top: 0;
     }
 
     .card-grid {
@@ -195,6 +203,74 @@
       color: var(--green-dark);
     }
 
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .image-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #e9f1eb;
+    }
+
+    .image-card .caption {
+      padding: 16px 18px;
+    }
+
+    .image-card h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 1.02rem;
+    }
+
+    .image-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    .diagram-panel {
+      margin-top: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #f8fbf8;
+    }
+
+    .diagram-panel img {
+      width: 100%;
+      display: block;
+      background: #edf5ef;
+    }
+
+    .diagram-panel .caption {
+      padding: 18px 20px;
+    }
+
+    .diagram-panel .caption h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+    }
+
+    .diagram-panel .caption p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
     footer {
       text-align: center;
       padding: 34px 20px 46px;
@@ -218,6 +294,10 @@
       .section-block,
       .intro-panel {
         padding: 22px 18px;
+      }
+
+      .image-card img {
+        height: 200px;
       }
     }
   </style>
@@ -247,9 +327,10 @@
   <section class="hero-ecosystem">
     <h1>Ecosystem Value and Public Benefit</h1>
     <p>
-      This page explains why urban woodlands generate important benefits for people,
-      neighbourhoods, and the wider environment. It focuses on the idea that many of
-      these benefits are real and valuable, even when they are not clearly priced in markets.
+      Russia Dock Woodlands and Stave Hill Ecological Park generate ecological, social,
+      and economic value that is often overlooked in routine budgets and planning decisions.
+      This page explains how ecosystem service valuation helps make those wider public benefits
+      more visible and more useful for policy, funding, and long-term stewardship.
     </p>
 
     <div class="hero-badges">
@@ -262,12 +343,16 @@
   <main class="page-container">
 
     <section class="intro-panel">
-      <h2>Why this matters</h2>
+      <h2>Why this matters here</h2>
       <p>
-        Russia Dock Woodlands and Stave Hill Ecological Park are more than pleasant green
-        spaces. They support biodiversity, learning, recreation, mental wellbeing, and wider
-        environmental resilience. Yet many of these benefits remain invisible in budgets,
-        planning decisions, and everyday management debates.
+        Russia Dock Woodlands and Stave Hill are a high-use urban nature site with biodiversity,
+        wellbeing, and education value. Management decisions involve real trade-offs: access versus
+        disturbance, “tidy” versus wild, and short-term fixes versus long-term resilience.
+      </p>
+      <p>
+        Many of the site’s benefits behave like public goods. They matter deeply to local life,
+        but often remain invisible in budgets, planning, and investment decisions. Valuation helps
+        make these benefits easier to compare, discuss, and protect.
       </p>
     </section>
 
@@ -278,41 +363,47 @@
       </div>
 
       <p>
-        Ecosystem services are the benefits that people receive from nature. In an urban
-        woodland, these benefits are not only ecological. They also include social,
-        educational, and everyday quality-of-life benefits.
+        Ecosystem services describe how nature supports human life and wellbeing. In this case,
+        the woodland and park do not only provide ecological functions, but also wider public
+        benefits linked to health, learning, recreation, and local identity.
       </p>
 
       <div class="card-grid">
         <div class="info-card">
           <h3>Provisioning</h3>
           <p>
-            Natural systems can provide material resources such as water, biomass, and
-            other ecological outputs.
+            Food, water, biomass, and raw materials provided by natural systems.
           </p>
         </div>
 
         <div class="info-card">
           <h3>Regulating</h3>
           <p>
-            Woodlands and parks help regulate temperature, water, habitat quality, and
-            other environmental processes.
+            Climate regulation, water processes, air quality, and other functions that stabilise environments.
           </p>
         </div>
 
         <div class="info-card">
           <h3>Cultural</h3>
           <p>
-            Urban nature supports recreation, identity, learning, community life, and
-            mental wellbeing.
+            Recreation, identity, learning, aesthetic experience, and everyday social meaning.
           </p>
         </div>
 
         <div class="info-card">
           <h3>Supporting</h3>
           <p>
-            Soils, habitats, species interactions, and nutrient cycles underpin the wider
-            health of the ecosystem.
+            Soil, habitat, nutrient cycles, and background ecological conditions that sustain the system.
+          </p>
+        </div>
+      </div>
+
+      <div class="diagram-panel">
+        <img src="images/ecosystem/ecosystem-services.jpg" alt="Classification of ecosystem services">
+        <div class="caption">
+          <h3>Ecosystem service categories</h3>
+          <p>
+            The valuation framework treats ecosystem services as multiple and interconnected, rather than as a single environmental output.
           </p>
         </div>
       </div>
@@ -321,21 +412,33 @@
     <section class="section-block">
       <div class="section-title">
         <div class="bar"></div>
-        <h2>Why urban nature is often undervalued</h2>
+        <h2>Why valuation is needed</h2>
       </div>
 
       <p>
-        Many ecosystem services function as public goods. People benefit from them collectively,
-        but they are often under-recognised because they are not directly bought and sold.
-        Some benefits, such as recreation, are visible and immediate. Others, such as climate
-        regulation or ecological resilience, are less obvious and more easily ignored.
+        Many ecosystem services are public goods. Some, such as recreation, are easier to recognise because people experience them directly.
+        Others, especially regulating services, are less visible, more long-term, and less likely to appear in market prices.
       </p>
+
+      <p>
+        The presentation also stresses that ecosystems are natural capital, while ecosystem services are the flows of benefits people receive.
+        Those benefits depend on interactions between natural, human, social, and built capital, not on nature alone.
+      </p>
+
+      <div class="diagram-panel">
+        <img src="images/ecosystem/interaction-diagram.jpg" alt="Diagram showing natural, human, social and built capital interaction">
+        <div class="caption">
+          <h3>Natural capital and human wellbeing</h3>
+          <p>
+            Service delivery depends on how ecological systems interact with institutions, knowledge, infrastructure, and everyday use.
+          </p>
+        </div>
+      </div>
 
       <div class="highlight-box">
         <p>
-          <strong>The key issue is visibility.</strong> Valuation does not create value from
-          nowhere. It helps make already-existing ecological and social benefits more visible
-          to planning, funding, and governance processes.
+          <strong>Key idea:</strong> valuation does not invent new value. It makes already-existing ecological and social benefits more visible
+          in policy and investment decisions.
         </p>
       </div>
     </section>
@@ -343,47 +446,193 @@
     <section class="section-block">
       <div class="section-title">
         <div class="bar"></div>
-        <h2>How people think about ecosystem value</h2>
+        <h2>How ecosystem value was measured</h2>
       </div>
 
       <p>
-        The presentation outlined several different approaches to ecosystem service valuation.
-        Rather than focusing on numerical estimates, this page highlights what each method
-        helps us understand.
+        The project compares five approaches to valuation. Each method captures a different aspect of value and comes with different strengths and limitations.
       </p>
 
       <div class="card-grid">
         <div class="info-card">
+          <h3>Method 1: Hedonic pricing</h3>
+          <p>
+            Uses housing market data to estimate how much people are willing to pay to live near environmental quality.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Method 2: Holistic valuation</h3>
+          <p>
+            Treats the park as natural capital and uses surrounding land value as a proxy for broader ecosystem value.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Method 3: ESVD transfer</h3>
+          <p>
+            Uses standardised ecosystem service values from previous studies and matches them to mapped habitats.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Method 4: Benefit transfer</h3>
+          <p>
+            Compares urban-based and biome-based transfer routes to test how assumptions change estimated value.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Method 5: Willingness to pay</h3>
+          <p>
+            Uses survey responses to estimate how much local people would voluntarily contribute to support the park.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>What the results show</h2>
+      </div>
+
+      <p>
+        Different methods produce very different estimates. This is not simply a problem of error. It reflects the fact that different approaches capture different dimensions of ecosystem value.
+      </p>
+
+      <div class="two-column">
+        <div class="house-box">
           <h3>Hedonic pricing</h3>
-          <p>
-            Looks at how environmental quality may shape nearby property values, showing
-            that access to green space can influence how places are valued.
-          </p>
+          <ul>
+            <li>Properties within 500 metres sold for about 7.7% more than comparable properties further away.</li>
+            <li>Average house price within 500 metres: £586,419.</li>
+            <li>Number of nearby properties used: 732.</li>
+            <li>Estimated capitalised ecosystem service value: £33 million.</li>
+          </ul>
         </div>
 
-        <div class="info-card">
+        <div class="house-box">
           <h3>Holistic valuation</h3>
-          <p>
-            Treats the park as natural capital and asks how ecological systems contribute
-            to wider neighbourhood attractiveness, health, and livability.
-          </p>
+          <ul>
+            <li>Total park area used: 13.18 hectares.</li>
+            <li>Natural capital value estimate: £509,670,600.</li>
+            <li>Estimated annual ecosystem service value: £25.5 million per year.</li>
+            <li>Includes recreation, wellbeing, biodiversity habitat, climate regulation, and neighbourhood attractiveness.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="images/ecosystem/hedonic-map.jpg" alt="Map of housing transactions and parks in the study area">
+          <div class="caption">
+            <h3>Hedonic pricing study area</h3>
+            <p>
+              Housing transaction data and park locations were combined spatially to test the relationship between proximity and price.
+            </p>
+          </div>
         </div>
 
-        <div class="info-card">
-          <h3>Benefit transfer</h3>
-          <p>
-            Uses evidence from previous ecosystem studies to estimate likely value patterns
-            for similar habitats and services.
-          </p>
+        <div class="image-card">
+          <img src="images/ecosystem/benefit-transfer-results.jpg" alt="Comparison of urban studies and biome studies valuation results">
+          <div class="caption">
+            <h3>Benefit transfer comparison</h3>
+            <p>
+              Urban-based and biome-based transfer routes produce sharply different values, showing how assumptions shape ecosystem valuation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="house-box">
+          <h3>Benefit transfer results</h3>
+          <ul>
+            <li>Urban studies approach: approximately £299.6 million per year.</li>
+            <li>Biome studies approach: approximately £936,800 per year.</li>
+            <li>Urban estimates are strongly influenced by property and recreation demand.</li>
+            <li>Biome estimates focus more narrowly on ecological function.</li>
+          </ul>
         </div>
 
-        <div class="info-card">
+        <div class="house-box">
           <h3>Willingness to pay</h3>
+          <ul>
+            <li>Total respondents: 74.</li>
+            <li>Positive WTP responses: 51 (69%).</li>
+            <li>Mean WTP: about £45 per person per year.</li>
+            <li>Estimated annual local contribution: approximately £483,566 to £562,747.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>What local people want improved</h2>
+      </div>
+
+      <p>
+        One of the strongest findings from the survey-based valuation work is that people are most willing to support visible and practical improvements.
+      </p>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Top priority</h3>
           <p>
-            Explores how strongly local people support the site and what kinds of practical
-            improvements they care about most.
+            Clearer signage and information was the highest-ranked improvement need.
           </p>
         </div>
+
+        <div class="info-card">
+          <h3>Safety</h3>
+          <p>
+            Safety and anti-social behaviour were a major concern, showing that environmental value also depends on public confidence.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Infrastructure</h3>
+          <p>
+            Seating, lighting, and other small-scale facilities matter for how people experience and support the site.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Ecological restoration</h3>
+          <p>
+            Wetland and waterbody restoration also appeared as a meaningful improvement priority.
+          </p>
+        </div>
+      </div>
+
+      <div class="diagram-panel">
+        <img src="images/ecosystem/wtp-improvements.jpg" alt="Most important improvement needed chart">
+        <div class="caption">
+          <h3>Visible improvements and public support</h3>
+          <p>
+            The willingness-to-pay results suggest that local support is strongest when improvements are practical, legible, and clearly connected to everyday use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Why the estimates differ</h2>
+      </div>
+
+      <p>
+        The methods do not answer exactly the same question. Some reflect market behaviour, some estimate broader stock value, some transfer values from comparable studies, and some capture stated local support for non-market goods.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          <strong>Important takeaway:</strong> ecosystem value is not one fixed number. The different methods help reveal different layers of value, from local willingness to contribute to wider natural capital and urban amenity effects.
+        </p>
       </div>
     </section>
 
@@ -397,20 +646,20 @@
         <div class="house-box">
           <h3>For planning and policy</h3>
           <ul>
-            <li>Makes hidden trade-offs easier to see</li>
-            <li>Strengthens arguments for conservation and long-term maintenance</li>
-            <li>Supports funding decisions beyond short-term visible fixes</li>
-            <li>Shows that nature should be treated as core infrastructure, not leftover land</li>
+            <li>Makes hidden trade-offs more visible.</li>
+            <li>Shows the real cost of development when ecological value is otherwise treated as zero.</li>
+            <li>Supports conservation funding, environmental taxes, and payment for ecosystem services approaches.</li>
+            <li>Suggests that public goods may require new governance tools and institutions.</li>
           </ul>
         </div>
 
         <div class="house-box">
           <h3>For community wellbeing</h3>
           <ul>
-            <li>Highlights the social value of everyday access to nature</li>
-            <li>Supports healthier, safer, and more attractive neighbourhoods</li>
-            <li>Strengthens community claims to protect shared green spaces</li>
-            <li>Links environmental quality with public wellbeing and inclusion</li>
+            <li>Shows that economy, ecology, and social wellbeing are interdependent.</li>
+            <li>Highlights how ecosystem degradation can disproportionately affect vulnerable groups.</li>
+            <li>Supports nature-based solutions, often at lower cost than engineered alternatives.</li>
+            <li>Strengthens public claims to protect shared green spaces.</li>
           </ul>
         </div>
       </div>
@@ -424,10 +673,7 @@
 
       <div class="highlight-box">
         <p>
-          <strong>The main message is simple:</strong> woodlands and ecological parks create
-          value that is ecological, social, and civic at the same time. Ecosystem valuation
-          helps translate that wider value into a language that can support better decisions,
-          fairer funding, and stronger public stewardship.
+          <strong>The main message is simple:</strong> Russia Dock Woodlands and Stave Hill Ecological Park create value that is ecological, social, and economic at the same time. Ecosystem valuation helps translate that wider public benefit into a language that can support better decisions, fairer funding, and stronger long-term stewardship.
         </p>
       </div>
     </section>
@@ -436,7 +682,7 @@
 
   <footer>
     <p>Friends of Russia Dock Woodlands</p>
-    <p>Ecosystem value content adapted for public communication as part of the website prototype.</p>
+    <p>Ecosystem value content adapted from the ecosystem service valuation project for public communication.</p>
   </footer>
 
 </body>
