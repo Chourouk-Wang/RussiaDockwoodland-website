@@ -6,9 +6,30 @@
   <title>Community Voice | Russia Dock Woodlands</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --green-dark: #2F5D50;
+      --green-mid: #5f8a77;
+      --green-light: #A7C4A0;
+      --bg-soft: #F4F7F5;
+      --bg-panel: #ffffff;
+      --text-main: #2C3E50;
+      --text-soft: #5d6d6f;
+      --border-soft: #dbe7de;
+      --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+
+    body {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      margin: 0;
+    }
+
     .page-hero {
-      background: linear-gradient(rgba(47,93,80,0.78), rgba(47,93,80,0.78)),
-        url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      background:
+        linear-gradient(rgba(47,93,80,0.84), rgba(47,93,80,0.84)),
+        url("images/community/survey-hero.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 90px 20px;
@@ -20,17 +41,63 @@
     }
 
     .page-hero p {
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto;
-      line-height: 1.7;
-      font-size: 1.1rem;
+      line-height: 1.75;
+      font-size: 1.08rem;
     }
 
     .content-wrap {
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 50px 20px;
+    }
+
+    .intro-box,
+    .section-panel {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      border: 1px solid #dbe7de;
+    }
+
+    .intro-box {
+      padding: 30px;
+      margin-bottom: 28px;
       text-align: center;
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 1.7rem;
+    }
+
+    .intro-box p {
+      max-width: 900px;
+      margin: 0 auto 12px;
+      line-height: 1.8;
+    }
+
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-panel {
+      padding: 30px;
+      margin-bottom: 28px;
+    }
+
+    .section-panel h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: var(--green-dark);
+      font-size: 1.55rem;
+    }
+
+    .section-panel p {
+      line-height: 1.8;
+      color: var(--text-main);
     }
 
     .info-boxes {
@@ -38,15 +105,98 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 22px;
-      margin: 35px 0 20px;
+      margin: 26px 0 10px;
     }
 
     .info-box {
-      background: white;
-      width: 280px;
+      background: #f8fbf8;
+      width: 290px;
       padding: 24px;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--green-dark);
+      font-size: 1.08rem;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+      align-items: start;
+    }
+
+    .text-card {
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .text-card h3 {
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    .text-card ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    .image-panel {
+      margin-top: 22px;
+      background: #f8fbf8;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .image-panel img {
+      width: 100%;
+      display: block;
+      background: #e8f0ea;
+    }
+
+    .image-caption {
+      padding: 18px 20px;
+    }
+
+    .image-caption h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 1.06rem;
+    }
+
+    .image-caption p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5ef, #f8fbf8);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 22px;
+      margin-top: 20px;
+    }
+
+    .highlight-box strong {
+      color: var(--green-dark);
     }
 
     .form-section {
@@ -58,10 +208,11 @@
 
     .form-section h2 {
       margin-bottom: 15px;
+      color: var(--green-dark);
     }
 
     .form-section p {
-      max-width: 820px;
+      max-width: 860px;
       margin: 0 auto 25px;
       line-height: 1.7;
     }
@@ -105,6 +256,15 @@
       .info-box {
         width: 90%;
       }
+
+      .content-wrap {
+        padding: 36px 16px;
+      }
+
+      .section-panel,
+      .intro-box {
+        padding: 22px 18px;
+      }
     }
   </style>
 </head>
@@ -115,51 +275,295 @@
     <p>Connecting Community, Ecology, and Governance</p>
     <nav>
       <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <a href="events.html">Events</a>
+      <a href="news.html">News</a>
       <a href="involved.html">Get Involved</a>
       <a href="community.html">Community Voice</a>
       <a href="map.html">Map</a>
       <a href="ecology.html">Ecology</a>
+      <a href="hydrology.html">Hydrology</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <section class="page-hero">
     <h1>Community Voice</h1>
     <p>
-      This page supports participatory governance by giving visitors, residents, and
-      volunteers a space to share feedback, express priorities, and contribute ideas.
+      This page shares the main findings from a mixed survey on Russia Dock Woodlands and
+      Stave Hill Ecological Park. The project explored who uses the site, how people value it,
+      where practical frustrations emerge, and how community experience compares with official goals.
     </p>
   </section>
 
   <section class="content-wrap">
-    <h2>Why Community Input Matters</h2>
-    <p>
-      A more inclusive woodland is shaped not only by ecological management, but also by
-      the experiences, needs, and knowledge of the people who use and care for the site.
-    </p>
 
-    <div class="info-boxes">
-      <div class="info-box">
-        <h3>Public Feedback</h3>
-        <p>Gather ideas from visitors and local residents about accessibility, facilities, and site use.</p>
+    <section class="intro-box">
+      <h2>Why this survey matters</h2>
+      <p>
+        The survey was designed to bridge a gap between policy and lived experience. It asks not only
+        whether people appreciate the park, but also who is being heard, what everyday problems matter most,
+        and where official ecological ambitions do not fully match public experience on the ground.
+      </p>
+      <p>
+        The questionnaire combined online and in-person methods and focused on visitor profile, awareness,
+        experience, improvement priorities, and views on future engagement and governance.
+      </p>
+    </section>
+
+    <section class="section-panel">
+      <h2>What the survey looked at</h2>
+      <p>
+        The survey was structured around four themes: visitor profile and usage patterns, awareness and perceived value,
+        future expectations and improvement priorities, and willingness to support or participate in governance and stewardship.
+      </p>
+
+      <div class="info-boxes">
+        <div class="info-box">
+          <h3>Visitor profile</h3>
+          <p>Who comes here, how often they visit, how far they travel, and what they mainly come to do.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Experience and value</h3>
+          <p>How people feel about the site, how satisfied they are, and what they think makes it important.</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Priorities and governance</h3>
+          <p>What people most want improved, and how they think community voice should relate to expert management.</p>
+        </div>
       </div>
 
-      <div class="info-box">
-        <h3>Co-design</h3>
-        <p>Support collaborative decision-making between organisers, volunteers, and the wider community.</p>
+      <div class="image-panel">
+        <img src="images/community/survey-map.jpg" alt="Map showing survey collection locations">
+        <div class="image-caption">
+          <h3>Where responses were collected</h3>
+          <p>
+            In-person questionnaires were collected at entrances, paths, lawns, and the Stave Hill viewpoint.
+            Field notes also observed that even people living within a short walk of the site often had little knowledge of it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel">
+      <h2>Who is most strongly represented</h2>
+      <p>
+        The strongest recurring survey pattern is a nearby resident, often living within a 10-minute walk,
+        visiting frequently, valuing nature as part of everyday life, and often — though not always — arriving with a dog.
+        The survey also identified a smaller visitor or explorer group who had only recently discovered the park.
+      </p>
+
+      <div class="two-column">
+        <div class="text-card">
+          <h3>Core user profile</h3>
+          <ul>
+            <li>Nearby resident</li>
+            <li>Usually within a short walking distance</li>
+            <li>Frequent visitor</li>
+            <li>Strong everyday use of the landscape</li>
+            <li>Often connected with dog walking</li>
+          </ul>
+        </div>
+
+        <div class="text-card">
+          <h3>Smaller explorer group</h3>
+          <ul>
+            <li>Newer or less routine visitors</li>
+            <li>Interested in biodiversity and exploration</li>
+            <li>Suggest the park has meaning beyond the immediate neighbourhood</li>
+            <li>Important for understanding future reach and inclusion</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="info-box">
-        <h3>Transparency</h3>
-        <p>Use digital participation tools to improve visibility, trust, and communication.</p>
+      <div class="image-panel">
+        <img src="images/community/core-users.jpg" alt="Illustration of core user and visitor groups">
+        <div class="image-caption">
+          <h3>Who the current evidence represents most strongly</h3>
+          <p>
+            The data is especially strong for everyday local users, but weaker for faster-moving, less engaged,
+            or purely pass-through users.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section-panel">
+      <h2>Three main interpretation threads</h2>
+      <p>
+        Rather than only reporting more numbers, the survey presentation identifies three broader interpretive patterns
+        that help explain what the results mean in practice.
+      </p>
+
+      <div class="info-boxes">
+        <div class="info-box">
+          <h3>Cognitive disconnect</h3>
+          <p>
+            People may recognise the place as valuable, but often do not understand its formal status,
+            management structure, or how to report issues.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Nature is valued, but friction is practical</h3>
+          <p>
+            People appreciate nature strongly, but the most immediate frustrations are about safety,
+            paths, lighting, cleanliness, maintenance, and day-to-day usability.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>The value paradox</h3>
+          <p>
+            Broadly shared values include nature, health, and exercise, but first-choice priorities reveal
+            that dog walking is especially central for a substantial group of users.
+          </p>
+        </div>
+      </div>
+
+      <div class="image-panel">
+        <img src="images/community/parallel-threads.jpg" alt="Survey interpretation threads illustration">
+        <div class="image-caption">
+          <h3>From results to interpretation</h3>
+          <p>
+            The presentation moves from simple data reporting to explaining how use, attachment, and friction points
+            shape real community experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel">
+      <h2>What people value — and what gets in the way</h2>
+      <p>
+        Overall satisfaction is relatively high, and many respondents gave positive evaluations of the park’s management,
+        visitor experience, and wider importance. Many also expressed emotional attachment and a sense of belonging.
+        At the same time, open comments and ranked priorities show that practical concerns remain highly significant.
+      </p>
+
+      <div class="two-column">
+        <div class="text-card">
+          <h3>What people value</h3>
+          <ul>
+            <li>Enjoying nature and wildlife</li>
+            <li>Physical and mental health benefits</li>
+            <li>Exercise and everyday outdoor use</li>
+            <li>Supporting wildlife and habitats</li>
+            <li>Landscape quality and local identity</li>
+          </ul>
+        </div>
+
+        <div class="text-card">
+          <h3>What people want improved</h3>
+          <ul>
+            <li>Clearer signage and information</li>
+            <li>Safety and anti-social behaviour management</li>
+            <li>Lighting, visibility, and seating</li>
+            <li>Paths, accessibility, and maintenance</li>
+            <li>More understandable links between nature and management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>Key insight:</strong> people strongly value the natural qualities of the site, but many of the barriers
+          to deeper engagement are ordinary and practical rather than ecological in the abstract.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-panel">
+      <h2>Official goals vs. lived experience</h2>
+      <p>
+        One of the clearest arguments in the presentation is that there is a gap between official ambitions and community evidence.
+        Official narratives emphasise ecology, accessibility, safety, and fairer public land use. Community responses support these goals,
+        but also show that many nearby residents still feel disconnected from the site’s identity and day-to-day management.
+      </p>
+
+      <div class="two-column">
+        <div class="text-card">
+          <h3>Official ambitions</h3>
+          <ul>
+            <li>Fairer, greener, safer public land</li>
+            <li>Ecological conservation and habitat protection</li>
+            <li>Accessibility and public amenity</li>
+            <li>Managing budget, anti-social behaviour, and maintenance limits</li>
+          </ul>
+        </div>
+
+        <div class="text-card">
+          <h3>Community evidence</h3>
+          <ul>
+            <li>Many users are highly local, but not fully informed</li>
+            <li>A large share do not know the site’s Local Nature Reserve status</li>
+            <li>Safety, signage, and infrastructure are repeatedly raised</li>
+            <li>Nearby users may still feel like “strangers” to the park’s identity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-panel">
+        <img src="images/community/official-vs-community.jpg" alt="Official goals versus community evidence comparison">
+        <div class="image-caption">
+          <h3>The gap the survey highlights</h3>
+          <p>
+            The issue is not that official aims are wrong, but that lived experience shows where those aims are not yet fully realised on the ground.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel">
+      <h2>What this suggests for the future</h2>
+      <p>
+        The survey does not end with raw data. It points toward several practical directions: broadening reach,
+        deepening inclusion, and using user feedback more directly to support infrastructure repair, communication,
+        and longer-term shared stewardship.
+      </p>
+
+      <div class="info-boxes">
+        <div class="info-box">
+          <h3>Broaden reach</h3>
+          <p>
+            Reach nearby residents who are physically close to the site but still not strongly connected to it.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Deepen inclusion</h3>
+          <p>
+            Strengthen participation among groups who are harder to capture in the current evidence, including fast-moving or less engaged users.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Improve practical conditions</h3>
+          <p>
+            Focus on signage, lighting, access, seating, and maintenance so that ecological value is matched by a more welcoming public experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>Central message:</strong> the park is valued, but stronger belonging will depend on clearer identity,
+          safer and more legible spaces, and better ways of turning local experience into practical action.
+        </p>
+      </div>
+    </section>
+
   </section>
 
   <section class="form-section">
     <h2>Share Your Feedback</h2>
     <p>
-      This embedded survey allows community members to submit ideas and indicate how they
-      would like to engage with the woodland in the future.
+      This embedded survey allows residents, visitors, and volunteers to contribute ideas, highlight practical concerns,
+      and indicate how they would like to support the future of Russia Dock Woodlands and Stave Hill Ecological Park.
     </p>
 
     <iframe src="https://docs.google.com/forms/d/e/你的表单ID/viewform?embedded=true">
@@ -167,8 +571,7 @@
     </iframe>
 
     <p class="note">
-      Replace “你的表单ID” with your Google Form link ID. Once updated, this page becomes a live
-      participation tool rather than a static webpage.
+      Replace “你的表单ID” with your Google Form link ID. After that, this page becomes an active participation tool as well as a public summary of the survey project.
     </p>
   </section>
 
