@@ -199,6 +199,38 @@
       color: var(--green-dark);
     }
 
+    .download-section {
+      margin-top: 6px;
+    }
+
+    .download-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .download-actions a {
+      text-decoration: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: var(--green-dark);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
     footer {
       text-align: center;
       padding: 34px 20px 46px;
@@ -621,6 +653,27 @@
           Ecosystem service valuation helps make these benefits more visible and more useful
           for real decisions about planning, management, conservation, and community wellbeing.
         </p>
+      </div>
+    </section>
+
+    <section class="section-block download-section">
+      <div class="section-title">
+        <div class="bar"></div>
+        <h2>Download Project Presentation</h2>
+      </div>
+
+      <p>
+        You can download the full presentation file for this section below.
+      </p>
+
+      <div class="download-actions">
+        <a
+          class="download-btn"
+          href="files/ecosystem/ecosystem-valuation.zip"
+          download
+        >
+          Download ZIP Presentation
+        </a>
       </div>
     </section>
 
