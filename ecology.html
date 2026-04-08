@@ -100,6 +100,74 @@
       min-width: 220px;
     }
 
+    .report-links {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding: 0 20px 60px;
+      text-align: center;
+    }
+
+    .report-links h2 {
+      margin-bottom: 14px;
+      color: #24352d;
+    }
+
+    .report-links > p {
+      max-width: 850px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    .report-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .report-card {
+      background: white;
+      width: 460px;
+      max-width: 100%;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    .report-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #2F5D50;
+    }
+
+    .report-card p {
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .report-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .report-actions a {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #2F5D50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .report-actions a:hover {
+      background: #24483e;
+    }
+
     footer {
       background: #2F5D50;
       color: white;
@@ -113,7 +181,8 @@
         font-size: 2.1rem;
       }
 
-      .eco-card {
+      .eco-card,
+      .report-card {
         width: 90%;
       }
     }
@@ -196,6 +265,42 @@
       <div class="service-item"><strong>Flood Mitigation</strong><br>Soils and planting help slow surface runoff.</div>
       <div class="service-item"><strong>Mental Wellbeing</strong><br>Access to nature supports health and recovery.</div>
       <div class="service-item"><strong>Environmental Education</strong><br>The site offers everyday learning opportunities.</div>
+    </div>
+  </section>
+
+  <section class="report-links">
+    <h2>Student Group Reports</h2>
+    <p>
+      Explore supporting student work connected to ecology, ecosystem services,
+      and hydrological resilience across Russia Dock Woodlands and Stave Hill Ecological Park.
+    </p>
+
+    <div class="report-grid">
+      <div class="report-card">
+        <h3>Ecosystem Service Valuation</h3>
+        <p>
+          This report explores how the site creates public value through biodiversity,
+          wellbeing, climate regulation, and ecosystem service valuation, helping make
+          ecological benefits more visible for planning and decision-making.
+        </p>
+        <div class="report-actions">
+          <a href="assets/reports/ecosystem-service-valuation.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a href="assets/reports/ecosystem-service-valuation.pdf" download>Download PDF</a>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <h3>Hydrological System</h3>
+        <p>
+          This report focuses on water input management, pond restoration, channel flow
+          reconfiguration, and long-term hydrological resilience, showing how ecological
+          health depends on better water systems rather than simply more water.
+        </p>
+        <div class="report-actions">
+          <a href="assets/reports/hydrological-system.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a href="assets/reports/hydrological-system.pdf" download>Download PDF</a>
+        </div>
+      </div>
     </div>
   </section>
 
